@@ -1,0 +1,204 @@
+{
+    "topics": [
+        {
+            "id": 1,
+            "name": "Customer Retention"
+        },
+        {
+            "id": 2,
+            "name": "Customer Experience"
+        },
+        {
+            "id": 3,
+            "name": "SEO"
+        },
+        {
+            "id": 4,
+            "name": "Instagram Marketing"
+        },
+        {
+            "id": 5,
+            "name": "Email Newsletters"
+        },
+        {
+            "id": 6,
+            "name": "Email Marketing"
+        },
+        {
+            "id": 7,
+            "name": "Sales Qualification"
+        },
+        {
+            "id": 8,
+            "name": "Sales Process"
+        },
+        {
+            "id": 9,
+            "name": "Sales Prospecting"
+        },
+        {
+            "id": 10,
+            "name": "Remote Work"
+        }
+    ],
+    "blogs": [
+        {
+            "id": 1,
+            "name": "Marketing",
+            "description": "Insights, ideas, and inspiration for modern marketers.",
+            "imageSrc": "https://blog.hubspot.com/hubfs/assets/blog.hubspot.com/2018/blogroll-images/marketing-blog-image.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Sales",
+            "description": "Sell smarter, beter and faster.",
+            "imageSrc": "https://blog.hubspot.com/hubfs/assets/blog.hubspot.com/2018/blogroll-images/sales-blog-image.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Service",
+            "description": "Helping you help your customers.",
+            "imageSrc": "https://blog.hubspot.com/hubfs/assets/blog.hubspot.com/2018/blogroll-images/service-blog-image.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Website",
+            "description": "All the nuts and bolts that go into your building your website.",
+            "imageSrc": "https://blog.hubspot.com/hubfs/assets/blog.hubspot.com/2018/blogroll-images/website-blog-image.jpg"
+        }
+    ],
+    "articles": [
+        {
+            "id": 1,
+            "name": "The Social Media Content Calendar Template Every Marketer Needs [Free Template]",
+            "blogId": 1,
+            "time": 11,
+            "topicId": 4,
+            "featured": false,
+            "imageSrc": "",
+            "editorPick": false,
+            "score": 10
+        },
+        {
+            "id": 2,
+            "name": "How to Create a Sales Plan: Template + Examples",
+            "blogId": 2,
+            "time": 9,
+            "topicId": 8,
+            "featured": false,
+            "imageSrc": "",
+            "editorPick": false,
+            "score": 9.8
+        },
+        {
+            "id": 3,
+            "name": "How to Deal With a Difficult (or Angry) Customer: 16 Tips",
+            "blogId": 3,
+            "time": 11,
+            "topicId": 2,
+            "featured": false,
+            "imageSrc": "",
+            "editorPick": false,
+            "score": 8.7
+        },
+        {
+            "id": 4,
+            "name": "11 Social Media Calendars, Tools, & Templates to Plan Your Content",
+            "blogId": 1,
+            "time": 14,
+            "topicId": 4,
+            "featured": false,
+            "imageSrc": "",
+            "editorPick": true,
+            "score": 6
+        },
+        {
+            "id": 5,
+            "name": "8 Questions to Ask a Potential Customer About Their Business Pain Points",
+            "blogId": 2,
+            "time": 9,
+            "topicId": 8,
+            "featured": false,
+            "imageSrc": "",
+            "editorPick": true,
+            "score": 7
+        },
+        {
+            "id": 6,
+            "name": "5 SaaS Onboarding Best Practices to Ensure Your Customers' Success",
+            "blogId": 3,
+            "time": 5,
+            "topicId": 1,
+            "featured": false,
+            "imageSrc": "",
+            "editorPick": true,
+            "score": 7.3
+        },
+        {
+            "id": 7,
+            "name": "How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post Templates]",
+            "blogId": 1,
+            "time": 18,
+            "topicId": 3,
+            "featured": true,
+            "imageSrc": "https://blog.hubspot.com/hubfs/how%20to%20write%20a%20blog%20post-2.jpg",
+            "editorPick": false,
+            "score": 4
+        },
+        {
+            "id": 8,
+            "name": "Everything Our Paid Team Learned From Attempting a Reddit Advertising Strategy",
+            "blogId": 1,
+            "time": 10,
+            "topicId": 6,
+            "featured": false,
+            "imageSrc": "https://blog.hubspot.com/hubfs/reddit-advertising.jpg",
+            "editorPick": false,
+            "score": 2.3
+        },
+        {
+            "id": 9,
+            "name": "These Two Simple Strategies Led to a 71% Increase in Qualified Leads for the HubSpot French Market",
+            "blogId": 1,
+            "time": 6,
+            "topicId": 6,
+            "featured": false,
+            "imageSrc": "https://blog.hubspot.com/hubfs/imageedit_13_2678122642.jpg",
+            "editorPick": false,
+            "score": 6.9
+        },
+        {
+            "id": 10,
+            "name": "The Ultimate Guide to Instagram Stories Ads in 2020",
+            "blogId": 1,
+            "time": 11,
+            "topicId": 4,
+            "featured": true,
+            "imageSrc": "https://blog.hubspot.com/hubfs/instagram-story-ads.jpg",
+            "editorPick": false,
+            "score": 7.8
+        },
+        {
+            "id": 11,
+            "name": "11 Psychology Tips to Get Prospects to Trust You Faster",
+            "blogId": 2,
+            "time": 6,
+            "topicId": 8,
+            "featured": true,
+            "imageSrc": "https://blog.hubspot.com/hubfs/sales-psychology%20%281%29.jpg",
+            "editorPick": false,
+            "score": 5
+        },
+        {
+            "id": 12,
+            "name": "Why Sales People Should Think and Operate Like Entrepreneurs",
+            "blogId": 2,
+            "time": 11,
+            "topicId": 8,
+            "featured": false,
+            "imageSrc": "https://blog.hubspot.com/hubfs/salespeople-think-like-entrepreneurs%20%281%29.jpg",
+            "editorPick": false,
+            "score": 6.7
+        }
+    ]
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles, Grid } from "@material-ui/core";
 import ArticleCard from "../../molecules/ArticleCard/ArticleCard";
 import Subtitle from "../../atoms/Subtitle/Subtitle";
@@ -16,47 +16,24 @@ const useStyles = makeStyles((theme) => ({
 
 const ArticleList = (props) => {
     const classes = useStyles();
+    const [featuredArticles, setFeaturedArticles] = useState(props.featuredArticles);
+    const [editorPicks, setEditorPicks] = useState(props.editorPicks);
+    const [mostPopular, setMostPopular] = useState(props.mostPopular);
+    const [regularArticles, setRegularArticles] =useState(props.regularArticles);
 
-    const articleList = {
-        mostPopular: [
-            {
-                articleName: "The Social Media Content Calendar Template Every Marketer Needs [Free Template]",
-                articleDetails: "MARKETING | 11 MIN READ"
-            },
-            {
-                articleName: "How to Create a Sales Plan: Template + Examples",
-                articleDetails: "SALES | 9 MIN READ"
-            },
-            {
-                articleName: "How to Deal With a Difficult (or Angry) Customer: 16 Tips",
-                articleDetails: "SERVICE | 13 MIN READ"
-            }
-        ],
-        editorPicks: [
-            {
-                articleName: "11 Social Media Calendars, Tools, & Templates to Plan Your Content",
-                articleDetails: "MARKETING | 14 MIN READ"
-            },
-            {
-                articleName: "8 Questions to Ask a Potential Customer About Their Business Pain Points",
-                articleDetails: "SALES | 9 MIN READ"
-            },
-            {
-                articleName: "5 SaaS Onboarding Best Practices to Ensure Your Customers' Success",
-                articleDetails: "SERVICE | 5 MIN READ"
-            }
-        ]
-    };
+    useEffect(() => {
+        setFeaturedArticles(props.featuredArticles);
+        setEditorPicks(props.editorPicks);
+        setMostPopular(props.mostPopular);
+        setRegularArticles(props.regularArticles);
+    }, [props.featuredArticles, props.editorPicks, props.mostPopular, props.regularArticles]);
 
     return (
         <Grid container spacing={2} className={classes.root}>
             <Grid item xs={8}>
                 <ArticleCard
                     variant={"featured"}
-                    imageSrc={"https://blog.hubspot.com/hubfs/how%20to%20write%20a%20blog%20post-2.jpg"}
-                    articleName={"How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post Templates]"}
-                    articleCategory={"PPC"}
-                    articleDetails={"MARKETING | 18 MIN READ"}
+                    {...featuredArticles[0]}
                 />
             </Grid>
             <Grid item xs={4}>
@@ -66,7 +43,7 @@ const ArticleList = (props) => {
                             content="Most Popular"
                         />
                     </Grid>
-                    {articleList.mostPopular.map((article) => {
+                    {mostPopular.map((article) => {
                         return (
                             <Grid item xs={12}>
                                 <ArticleCard
@@ -83,7 +60,7 @@ const ArticleList = (props) => {
                             content="Editor's Picks"
                         />
                     </Grid>
-                    {articleList.editorPicks.map((article) => {
+                    {editorPicks.map((article) => {
                         return (
                             <Grid item xs={12}>
                                 <ArticleCard
@@ -97,18 +74,12 @@ const ArticleList = (props) => {
             </Grid>
             <Grid item xs={4}>
                 <ArticleCard
-                    imageSrc={"https://blog.hubspot.com/hubfs/reddit-advertising.jpg"}
-                    articleName={"Everything Our Paid Team Learned From Attempting a Reddit Advertising Strategy"}
-                    articleCategory={"PPC"}
-                    articleDetails={"MARKETING | 10 MIN READ"}
+                    {...regularArticles[0]}
                 />
             </Grid>
             <Grid item xs={4}>
                 <ArticleCard
-                    imageSrc={"https://blog.hubspot.com/hubfs/imageedit_13_2678122642.jpg"}
-                    articleName={"These Two Simple Strategies Led to a 71% Increase in Qualified Leads for the HubSpot French Market"}
-                    articleCategory={"Email Marketing"}
-                    articleDetails={"MARKETING | 6 MIN READ"}
+                    {...regularArticles[1]}
                 />
             </Grid>
             <Grid item xs={4}>
@@ -120,27 +91,18 @@ const ArticleList = (props) => {
             <Grid item xs={9}>
                 <ArticleCard
                     variant={"featured"}
-                    imageSrc={"https://blog.hubspot.com/hubfs/instagram-story-ads.jpg"}
-                    articleName={"The Ultimate Guide to Instagram Stories Ads in 2020"}
-                    articleCategory={"Instagram Marketing"}
-                    articleDetails={"MARKETING | 11 MIN READ"}
+                    {...featuredArticles[1]}
                 />
             </Grid>
             <Grid item xs={9}>
                 <ArticleCard
                     variant={"featured"}
-                    imageSrc={"https://blog.hubspot.com/hubfs/sales-psychology%20%281%29.jpg"}
-                    articleName={"11 Psychology Tips to Get Prospects to Trust You Faster"}
-                    articleCategory={"Sales Process"}
-                    articleDetails={"SALES | 6 MIN READ"}
+                    {...featuredArticles[2]}
                 />
             </Grid>
             <Grid item xs={3}>
                 <ArticleCard
-                    imageSrc={"https://blog.hubspot.com/hubfs/salespeople-think-like-entrepreneurs%20%281%29.jpg"}
-                    articleName={"Why Sales People Should Think and Operate Like Entrepreneurs"}
-                    articleCategory={"Sales Tactics"}
-                    articleDetails={"SALES | 4 MIN READ"}
+                    {...regularArticles[2]}
                 />
             </Grid>
         </Grid>

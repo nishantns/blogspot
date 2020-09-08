@@ -58,7 +58,7 @@ const ArticleCard = (props) => {
                         root: classes.defaultCardMedia
                     }}
                     image={props.imageSrc}
-                    title={props.articleName}
+                    title={props.name}
                 />
                 <CardContent
                     classes={{
@@ -68,19 +68,19 @@ const ArticleCard = (props) => {
                     <STTypography
                         variant={"h3"}
                         color={"secondary"}
-                        children={props.articleCategory}
+                        children={props.topic}
                         className={classes.category}
                     />
                     <STTypography
                         variant={"h1"}
                         color={"secondary"}
-                        children={props.articleName}
+                        children={props.name}
                         className={classes.name}
                     />
                     <STTypography
                         variant={"subtitle2"}
                         color={"secondary"}
-                        children={props.articleDetails}
+                        children={`${props.blog} | ${props.time} MIN READ`}
                         className={classes.details}
                     />
                 </CardContent>
@@ -100,7 +100,7 @@ const ArticleCard = (props) => {
                         root: classes.featuredCardMedia
                     }}
                     image={props.imageSrc}
-                    title={props.articleName}
+                    title={props.name}
                 />
                 <CardContent
                     classes={{
@@ -110,13 +110,13 @@ const ArticleCard = (props) => {
                     <STTypography
                         variant={"h1"}
                         color={"secondary"}
-                        children={props.articleName}
+                        children={props.name}
                         className={classes.name}
                     />
                     <STTypography
                         variant={"subtitle2"}
                         color={"secondary"}
-                        children={props.articleDetails}
+                        children={`${props.blog} | ${props.time} MIN READ`}
                         className={classes.details}
                     />
                 </CardContent>
@@ -139,13 +139,13 @@ const ArticleCard = (props) => {
                     <STTypography
                         variant={"body2"}
                         color={"secondary"}
-                        children={props.articleName}
+                        children={props.name}
                         className={classes.minName}
                     />
                     <STTypography
                         variant={"subtitle2"}
                         color={"secondary"}
-                        children={props.articleDetails}
+                        children={`${props.blog} | ${props.time} MIN READ`}
                         className={classes.mindetails}
                     />
                 </CardContent>
