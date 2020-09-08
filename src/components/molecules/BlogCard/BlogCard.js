@@ -36,7 +36,7 @@ const BlogCard = (props) => {
                         root: classes.cardMedia
                     }}
                     image={props.imageSrc}
-                    title={props.blogName}
+                    title={props.name}
                 />
                 <CardContent
                     classes={{
@@ -45,11 +45,11 @@ const BlogCard = (props) => {
                 >
                     <STTypography
                         variant={"h2"}
-                        children={props.blogName}
+                        children={props.name}
                     />
                     <STTypography
                         variant={"body1"}
-                        children={props.blogDescription}
+                        children={props.description}
                         className={classes.description}
                     />
                 </CardContent>

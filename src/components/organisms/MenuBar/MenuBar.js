@@ -1,6 +1,5 @@
 import React from "react";
 import { makeStyles, Grid } from "@material-ui/core";
-import Logo from "../../../images/Hubspot.svg";
 
 const useStyles = makeStyles((theme) => ({
     logo: {
@@ -15,10 +14,10 @@ const MenuBar = (props) => {
     return (
         <Grid container>
             <Grid item xs={3}>
-                <img
+                {/* <img
                     src={Logo}
                     className={classes.logo}
-                />
+                /> */}
             </Grid>
         </Grid>
     );

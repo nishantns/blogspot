@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles, Grid } from "@material-ui/core";
 import STTypography from "../../atoms/STTypography/STTypography";
 import BlogCard from "../../molecules/BlogCard/BlogCard";
@@ -22,29 +22,14 @@ const useStyles = makeStyles((theme) => ({
 
 const BlogsSection = (props) => {
     const classes = useStyles();
-    
-    const blogs = [
-        {
-            imageSrc: "https://blog.hubspot.com/hubfs/assets/blog.hubspot.com/2018/blogroll-images/marketing-blog-image.jpg",
-            blogName: "Marketing",
-            blogDescription: "Insights, ideas, and inspiration for modern marketers."
-        },
-        {
-            imageSrc: "https://blog.hubspot.com/hubfs/assets/blog.hubspot.com/2018/blogroll-images/sales-blog-image.jpg",
-            blogName: "Sales",
-            blogDescription: "Sell smarter, beter and faster."
-        },
-        {
-            imageSrc: "https://blog.hubspot.com/hubfs/assets/blog.hubspot.com/2018/blogroll-images/service-blog-image.jpg",
-            blogName: "Service",
-            blogDescription: "Helping you help your customers."
-        },
-        {
-            imageSrc: "https://blog.hubspot.com/hubfs/assets/blog.hubspot.com/2018/blogroll-images/website-blog-image.jpg",
-            blogName: "Website",
-            blogDescription: "All the nuts and bolts that go into your building your website."
+
+    const [blogs, setBlogs] = useState([]);
+
+    useEffect(() => {
+        if (props.blogs.length > 0 && props.blogs !== blogs) {
+            setBlogs(props.blogs);
         }
-    ];
+    }, [props.blogs]);
 
     return (
         <Grid container className={classes.root} justify="center">

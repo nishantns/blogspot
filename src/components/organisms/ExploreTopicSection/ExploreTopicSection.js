@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles, Grid } from "@material-ui/core";
 import STTypography from "../../atoms/STTypography/STTypography";
 import TopicCard from "../../atoms/TopicCard/TopicCard";
@@ -25,14 +25,13 @@ const useStyles= makeStyles((theme) => ({
 
 const ExploreTopicSection = (props) => {
     const classes = useStyles();
+    const [topics, setTopics] = useState([]);
+
+    useEffect(() => {
+        setTopics(props.topics);
+    }, [props.topics]);
 
     const colors = ["#ff7a59", "#00bda5", "#6a78d1", "#f2545b", "#f5c26b"];
-    const topics = [
-        "Customer Retention", "Customer Experience", "SEO",
-        "Instagram Marketing", "Email Newsletters", "Email Marketing",
-        "Sales Qualification", "Sales Process", "Sales Prospecting",
-        "Remote work"
-    ]
 
     return (
         <Grid container className={classes.root} justify={"center"}>
@@ -59,7 +58,7 @@ const ExploreTopicSection = (props) => {
                             <Grid item xs={4}>
                                 <TopicCard
                                     borderColor={(colors[index % colors.length])}
-                                    children={topic}
+                                    children={topic.name}
                                 />
                             </Grid>
                         );
