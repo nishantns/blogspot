@@ -44,19 +44,27 @@
     "blogs": [
         {
             "id": 1,
-            "name": "Marketing"
+            "name": "Marketing",
+            "description": "Insights, ideas, and inspiration for modern marketers.",
+            "imageSrc": "https://blog.hubspot.com/hubfs/assets/blog.hubspot.com/2018/blogroll-images/marketing-blog-image.jpg"
         },
         {
             "id": 2,
-            "name": "Sales"
+            "name": "Sales",
+            "description": "Sell smarter, beter and faster.",
+            "imageSrc": "https://blog.hubspot.com/hubfs/assets/blog.hubspot.com/2018/blogroll-images/sales-blog-image.jpg"
         },
         {
             "id": 3,
-            "name": "Service"
+            "name": "Service",
+            "description": "Helping you help your customers.",
+            "imageSrc": "https://blog.hubspot.com/hubfs/assets/blog.hubspot.com/2018/blogroll-images/service-blog-image.jpg"
         },
         {
             "id": 4,
-            "name": "Website"
+            "name": "Website",
+            "description": "All the nuts and bolts that go into your building your website.",
+            "imageSrc": "https://blog.hubspot.com/hubfs/assets/blog.hubspot.com/2018/blogroll-images/website-blog-image.jpg"
         }
     ],
     "articles": [
